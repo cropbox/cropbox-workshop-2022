@@ -1,0 +1,23 @@
+name: docker
+on:
+  push:
+    branches:
+      - main
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: easimon/maximize-build-space@v4
+        with:
+          overprovision-lvm: 'true'
+          remove-dotnet: 'true'
+          remove-android: 'true'
+      - uses: actions/checkout@v2
+      - uses: rlespinasse/github-slug-action@v3.x
+      - uses: jupyterhub/repo2docker-action@master
+        with:
+          DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+          DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+          IMAGE_NAME: "cropbox/cropbox-binder"
+          ADDITIONAL_TAG: ${{ env.GITHUB_REF_SLUG }}
+          MYBINDERORG_TAG: ${{ env.GITHUB_REF_SLUG }}
