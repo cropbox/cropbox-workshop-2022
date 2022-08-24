@@ -1,7 +1,5 @@
 <a href="https://github.com/cropbox/Cropbox.jl"><img src="https://github.com/cropbox/Cropbox.jl/raw/main/docs/src/assets/logo.svg" alt="Cropbox" width="150"></a>
 
-# Cropbox
+# Cropbox Workshop 2022
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cropbox/cropbox-binder/main)
-
-This repository provides a Binder link for Jupyter notebook with [Cropbox](https://github.com/cropbox/Cropbox.jl) modeling framework readily available.
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/cropbox/cropbox-workshop-2022/main)
